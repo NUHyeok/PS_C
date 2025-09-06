@@ -1,0 +1,1 @@
+{"name":"Local: 10250","url":"c:\\Users\\user\\Documents\\PS_C\\Class 1\\10250.c","tests":[{"id":1757166355528,"input":"2\n6 12 10\n30 50 72","output":"402\n1203"},{"id":1757166396824,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\user\\Documents\\PS_C\\Class 1\\10250.c","group":"local","local":true}
