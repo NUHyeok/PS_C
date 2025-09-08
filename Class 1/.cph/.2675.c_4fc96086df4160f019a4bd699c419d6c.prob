@@ -1,0 +1,1 @@
+{"name":"Local: 2675","url":"c:\\Users\\user\\Documents\\PS_C\\Class 1\\2675.c","tests":[{"id":1757307609812,"input":"2\n3 ABC\n5 /HTP","output":"AAABBBCCC\n/////HHHHHTTTTTPPPPP"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\user\\Documents\\PS_C\\Class 1\\2675.c","group":"local","local":true}

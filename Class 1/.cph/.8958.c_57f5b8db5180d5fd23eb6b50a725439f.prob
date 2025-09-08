@@ -1,0 +1,1 @@
+{"name":"Local: 8958","url":"c:\\Users\\user\\Documents\\PS_C\\Class 1\\8958.c","tests":[{"id":1757312870050,"input":"5\nOOXXOXXOOO\nOOXXOOXXOO\nOXOXOXOXOXOXOX\nOOOOOOOOOO\nOOOOXOOOOXOOOOX","output":"10\n9\n7\n55\n30"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\user\\Documents\\PS_C\\Class 1\\8958.c","group":"local","local":true}

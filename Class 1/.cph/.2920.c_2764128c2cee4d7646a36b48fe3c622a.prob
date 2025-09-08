@@ -1,0 +1,1 @@
+{"name":"Local: 2920","url":"c:\\Users\\user\\Documents\\PS_C\\Class 1\\2920.c","tests":[{"id":1757308754602,"input":"1 2 3 4 5 6 7 8","output":"ascending"},{"id":1757308767503,"input":"8 7 6 5 4 3 2 1","output":"descending"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\user\\Documents\\PS_C\\Class 1\\2920.c","group":"local","local":true}
