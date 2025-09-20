@@ -17,6 +17,7 @@ int* getRow(int rowIndex, int* returnSize) {
                 B[i][j] = B[i-1][j] + B[i-1][j-1];
             }
         }
+    }
     
     for (int i = 0; i <= rowIndex; i++){
         if(i == 0 || i == rowIndex){
@@ -28,7 +29,4 @@ int* getRow(int rowIndex, int* returnSize) {
     }
 
     return A;
-
-    
-
 }
