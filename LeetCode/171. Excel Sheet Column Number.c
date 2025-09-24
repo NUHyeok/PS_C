@@ -1,3 +1,4 @@
+// 26진법으로 풀기 !!
 int titleToNumber(char* columnTitle) {
     int result = 0;
 
