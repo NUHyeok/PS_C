@@ -1,0 +1,1 @@
+{"name":"Local: 10814","url":"c:\\Users\\user\\Documents\\PS_C\\Class 2\\10814.c","tests":[{"id":1759586826840,"input":"3\n21 Junkyu\n21 Dohyun\n20 Sunyoung","output":"20 Sunyoung\n21 Junkyu\n21 Dohyun"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\user\\Documents\\PS_C\\Class 2\\10814.c","group":"local","local":true}
