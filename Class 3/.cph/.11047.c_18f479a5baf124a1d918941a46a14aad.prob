@@ -1,0 +1,1 @@
+{"name":"Local: 11047","url":"c:\\Users\\user\\Documents\\PS_C\\Class 3\\11047.c","tests":[{"id":1759907219685,"input":"10 4200\n1\n5\n10\n50\n100\n500\n1000\n5000\n10000\n50000","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\user\\Documents\\PS_C\\Class 3\\11047.c","group":"local","local":true}

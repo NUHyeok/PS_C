@@ -1,0 +1,1 @@
+{"name":"Local: 1764","url":"c:\\Users\\user\\Documents\\PS_C\\Class 3\\1764.c","tests":[{"id":1759834333130,"input":"3 4\nohhenrie\ncharlie\nbaesangwook\nobama\nbaesangwook\nohhenrie\nclinton","output":"2\nbaesangwook\nohhenrie"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\user\\Documents\\PS_C\\Class 3\\1764.c","group":"local","local":true}
