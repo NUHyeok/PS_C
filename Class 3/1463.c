@@ -16,7 +16,7 @@ int main(void){
         if(i % 3 == 0) s = A[i/3] + 1;
         if(i % 2 == 0) {
             if(s > 0) s = MIN(s, A[i/2] + 1);
-            else s = A[i-2] + 1;
+            else s = A[i / 2] + 1;
         }
         
         if(s > 0) A[i] = MIN(s, A[i-1]+1);
@@ -24,5 +24,7 @@ int main(void){
     }
 
     printf("%d", A[N]);
+    free(A);
+
     return 0;
 }

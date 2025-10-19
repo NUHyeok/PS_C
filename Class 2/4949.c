@@ -4,27 +4,43 @@
 int main(void){
     char s[105];
 
-    while (fgets(s, sizeof s, stdin)) {    
-        if (s[0] == '.') break;             
+    while(fgets(s, sizeof(s), stdin)){
+        
+        int is = 1;
 
-        char st[105];
-        int top = -1;
-        int ok = 1;
+        int i = 0;
+        char q[105];
 
-        for (int i = 0; s[i] != '\0' && s[i] != '\n'; i++) {
-            char c = s[i];
-            if (c == '(' || c == '[') {
-                st[++top] = c;              
-            } else if (c == ')') {
-                if (top < 0 || st[top] != '(') { ok = 0; break; }
-                top--;                      
-            } else if (c == ']') {
-                if (top < 0 || st[top] != '[') { ok = 0; break; }
-                top--;
+        if(s[0] == ".") break;
+
+        for(int j = 0; s[j] != '\0'; j++){
+            if(s[j] == '(' || s[j] == '['){
+                q[i++] = s[j];
             }
+            else if(s[j] == ')'){
+                if(i == 0 || q[i-1] != '('  ){
+                    is = 0;
+                    break;
+                }
+                else{
+                    i--;
+                }
+            }
+            else if(s[j] == ']'){
+                if(i == 0 || q[i-1] != '['){
+                    is = 0;
+                    break;
+                }
+                else{
+                    i--;
+                }
+            }
+
         }
 
-        puts((ok && top == -1) ? "yes" : "no");
+        if(i == 0 && is == 1) printf("yes\n");
+        else printf("no\n");
     }
+
     return 0;
 }
