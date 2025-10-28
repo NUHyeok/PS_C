@@ -11,4 +11,8 @@ int main(void){
 
     printf("%d", s % M);
     return 0;
+
+    
 }
+
+
