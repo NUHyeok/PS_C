@@ -21,6 +21,7 @@ int findTheWinner(int n, int k) {
         p[i].next = &p[i+1];
         p[i].previous = &p[i-1];
     }
+
     Student *current = &p[1];
 
     while(n > 1){
@@ -37,3 +38,14 @@ int findTheWinner(int n, int k) {
 
     return current->id;
 }
+
+// 요세푸스 문제
+/*
+int findTheWinner(int n, int k) {
+    int winner = 0;
+    for (int i = 1; i <= n; i++) {
+        winner = (winner + k) % i;
+    }
+    return winner + 1; // 1-인덱스로 변환
+}
+*/

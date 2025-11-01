@@ -1,0 +1,1 @@
+{"name":"Local: 1654","url":"c:\\Users\\user\\Documents\\PS_C\\Class 3\\1654.c","tests":[{"id":1762001292279,"input":"4 11\n802\n743\n457\n539","output":"200"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\user\\Documents\\PS_C\\Class 3\\1654.c","group":"local","local":true}
