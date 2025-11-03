@@ -1,0 +1,1 @@
+{"name":"Local: 1927","url":"c:\\Users\\user\\Documents\\PS_C\\Class 3\\1927.c","tests":[{"id":1762007487281,"input":"9\n0\n12345678\n1\n2\n0\n0\n0\n0\n32","output":"0\n1\n2\n12345678\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\user\\Documents\\PS_C\\Class 3\\1927.c","group":"local","local":true}
