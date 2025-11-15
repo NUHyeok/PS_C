@@ -1,29 +1,64 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
-long long X[100000];
+void insert(long long *MinHeap, long long value, int *size){
+    (*size)++;
+    int i = *size;
+    MinHeap[i] = value;
 
-int compare(const long long *a, const long long *b){
-    return (*b - *a);
+    while(i > 1 && MinHeap[i] < MinHeap[i / 2]){
+        long long temp = MinHeap[i];
+        MinHeap[i] = MinHeap[i / 2];
+        MinHeap[i/2] = temp;
+
+        i /= 2;
+    }
+
+
+}
+
+long long extractMin(long long *MinHeap,int *size){
+    if(*size == 0) return 0;
+
+    long long ans = MinHeap[1];
+    MinHeap[1] = MinHeap[*size];
+    (*size)--;
+
+    int current = 1;
+    while(1){
+        int left = 2 * current;
+        int right = 2 * current + 1;
+        int smallest = current;
+
+        if(left <= *size && MinHeap[left] < MinHeap[smallest]){
+            smallest = left;
+        }
+        if(right <= *size && MinHeap[right] < MinHeap[smallest]){
+            smallest = right;
+        }
+        if(smallest == current) break;
+
+        long long temp = MinHeap[current];
+        MinHeap[current] = MinHeap[smallest];
+        MinHeap[smallest] = temp;
+
+        current = smallest;
+    }
+    return ans;
 }
 
 int main(void){
-    int N,num, index = 0;
+    int N;
+    int size = 0;
     scanf("%d", &N);
-    
-    for(int i = 0; i < N; i++){
-        scanf("%d", &num);
-        if(num > 0){
-            X[index++] = num;
-            qsort(X, index, sizeof(long long), compare);
-        }
-        else if(num == 0){
-            if(index == 0) printf("0\n");
-            else printf("%lld\n", X[--index]);
-            
-        }
-    }
+    long long *MinHeap = (long long *)malloc((N+1) * sizeof(long long));
 
+    for(int i = 0 ; i < N; i++){
+        long long a;
+        scanf("%lld", &a);
+
+        if(a == 0) printf("%lld\n", extractMin(MinHeap, &size));
+        else insert(MinHeap, a, &size);
+    }
     return 0;
 }
