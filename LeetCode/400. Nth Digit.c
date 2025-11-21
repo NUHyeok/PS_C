@@ -8,7 +8,7 @@ long long num_digits(int m){
     long long count= 0;
 
     for(int i = 0;; i++){
-        if(tens[i+1] <= m){
+        if(tens[i+1] < m){
             int num_between = tens[i+1] - tens[i];
             count += (i+1) * num_between;
         }
