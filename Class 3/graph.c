@@ -16,6 +16,7 @@ void init(Graph* g)
 		for (col = 0; col < MAX_VERTICES; col++)
 			g->adj_mat[row][col] = 0;
 }
+
 // 정점 삽입 연산
 void insert_vertex(Graph* g, int vertex)
 {
@@ -48,8 +49,8 @@ void print_graph(Graph* g)
 
 void main()
 {
-	graph* g;
-	g = (graph*)malloc(sizeof(graph));
+	Graph* g;
+	g = (Graph*)malloc(sizeof(Graph));
 	init(g);
 	for (int i = 0; i < 4; i++)
 		insert_vertex(g, i);
