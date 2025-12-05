@@ -1,27 +1,24 @@
-int num_pre[2000];
-
 bool canFinish(int numCourses, int** prerequisites, int prerequisitesSize, int* prerequisitesColSize) {
-    memset(num_pre, 0, sizeof(num_pre));
+    int* indegree = (int *)calloc(numCourses, sizeof(int));
+    int *outdegree = (int *)calloc(numCourses, sizeof(int));
+
+    int* queue = (int *)malloc(numCourses * sizeof(int));
+    int front = 0, rear = 0;
 
     for(int i = 0; i < prerequisitesSize; i++){
-        num_pre[prerequisites[i][0]]++;
+        int next = prerequisites[i][0];
+        int pre = prerequisites[i][1];
+
+        indegree[next]++;
+        outdegree[pre]++;
     }
 
-    int count = 0;
-
-    while(count < numCourses){
-        int i = 0;
-        for(; i < numCourses; i++){
-            if(num_pre[i] == 0) break;
-        }
-        if(i == numCourses) return false;
-
-        num_pre[i] = -1;
-        count++;
-
-        for(int j = 0; j < prerequisitesSize; j++){
-            if(prerequisites[j][1] == i) num_pre[prerequisites[j][0]]--;
+    int** adj = (int**)malloc(sizeof(int*) * numCourses);
+    for (int i = 0; i < numCourses; i++) {
+        if (outdegree[i] > 0) {
+            adj[i] = (int*)malloc(sizeof(int) * outdegree[i]);
+        } else {
+            adj[i] = NULL;
         }
     }
-    return true;
 }
