@@ -105,7 +105,7 @@ void pop(void){
         if(right <= HeapSize && heap[right] < heap[small]){
             small = right;
         }
-        if(small = current) break;
+        if(small == current) break;
 
         swap(&heap[current], &heap[small]);
         current = small;
